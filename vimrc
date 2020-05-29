@@ -227,6 +227,6 @@ call plug#end()
 nnoremap <C-p> :GFiles<CR>
 
 
-source coc.vim
-source tex.vim
-source ale.vim
+source $HOME/.vim/coc.vim
+source $HOME/.vim/tex.vim
+source $HOME/.vim/ale.vim
