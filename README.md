@@ -3,14 +3,32 @@
 Config files for a more modern vim configuration using Coc and node
 
 ## Prerequisites
+You need to have vim 8.1 or higher for everything to work right
+For macOS start by installing brew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
 
-Install vim Plug. Vim Plug is the plugin manager
+#### Ubuntu/Debian
+```
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim
+```
+
+#### macOS
+```
+brew install vim
+```
+
+
+### Install vim Plug. Vim Plug is the plugin manager
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Install node.
+### Install node.
 To install node, it is best to intsall nvm, this will enable to use most modern version and switch if needed
 
 Consult this for latest version:
@@ -38,6 +56,35 @@ export NVM_DIR="$HOME/.nvm"
 Install the latest vesion with 
 ```
 nvm install lts
+```
+
+## Optional additional installations
+
+### Install yarn
+#### Linux 
+```
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+```
+
+Install yarn without node  
+```
+sudo apt update && sudo apt install --no-install-recommends yarn
+```
+
+#### macOS 
+```
+brew isntall yarn
+```
+
+### install tsserver
+```
+yarn global add typescript
+```
+
+### Rust
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 ##  Make soft links
