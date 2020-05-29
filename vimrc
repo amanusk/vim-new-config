@@ -32,8 +32,15 @@ set t_Co=256
 " Hide the mouse when typing text
 set mousehide
 
-" Ebanle mouse
+" Enable mouse
 set mouse=a
+
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set smartcase
+set smartindent
 
 " Make shift-insert work like in Xterm
 map <S-Insert> <MiddleMouse>
@@ -52,8 +59,6 @@ set incsearch
 set splitright
 set splitbelow
 
-" open fix list
-nmap <leader>l :lopen<CR>
 
 " Launch white space removal
 nmap _$ :call <SID>StripTrailingWhitespaces()<CR>
@@ -157,12 +162,6 @@ set foldcolumn=0
 " Enable Ctrl-A/Ctrl-X to work on octal and hex numbers, as well as characters
 set nrformats=octal,hex ",alpha
 
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
-set smartcase
-set smartindent
 
 " Always show signcolumns
 set signcolumn=yes
@@ -219,51 +218,15 @@ Plug 'TovarishFin/vim-solidity'
 
 " Ale
 Plug 'dense-analysis/ale'
+
+" Latex
+Plug 'lervag/vimtex'
 call plug#end()
 
-
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev-error)
-nmap <silent> ]g <Plug>(coc-diagnostic-next-error)
-
-nmap <silent> [G <Plug>(coc-diagnostic-prev)
-nmap <silent> ]G <Plug>(coc-diagnostic-next)
-
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-autocmd FileType rust let b:coc_root_patterns = ['Cargo.toml', '.git']
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-" nmap <leader>gd <Plug>(coc-definition)
-" nmap <leader>gr <Plug>(coc-references)
 " Fuzzy search files
 nnoremap <C-p> :GFiles<CR>
 
-highlight CocErrorSign ctermfg=0 ctermbg=9
-" highlight CocWarningSign ctermfg=0 ctermbg=11
 
-let g:ale_solidity_solc_options="--allow-paths $(pwd)"
+source coc.vim
+source tex.vim
+source ale.vim
