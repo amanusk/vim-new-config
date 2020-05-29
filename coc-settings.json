@@ -8,6 +8,7 @@
     "typescript",
     "javascript",
     "solidity",
+    "rust",
     "json"
   ]
   // "coc.preferences.diagnostic.displayByAle": true
