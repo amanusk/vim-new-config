@@ -264,3 +264,4 @@ nnoremap <C-p> :GFiles<CR>
 highlight CocErrorSign ctermfg=0 ctermbg=9
 " highlight CocWarningSign ctermfg=0 ctermbg=11
 
+let g:ale_solidity_solc_options="--allow-paths $(pwd)"

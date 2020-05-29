@@ -2,6 +2,6 @@
   // my variable
   "tsserver.enable": true,
   "eslint.autoFixOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "typescript", "javascript"],
-  "coc.preferences.diagnostic.displayByAle": true
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "typescript", "javascript", "solidity"],
+  // "coc.preferences.diagnostic.displayByAle": true
 }
