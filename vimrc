@@ -196,6 +196,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'mbbill/undotree'
