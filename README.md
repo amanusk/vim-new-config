@@ -101,6 +101,26 @@ yarn global add typescript
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
+Add this to your `.bashrc` or `.profile`
+
+```
+export PATH="$HOME/.cargo/bin:$PATH"
+```
+
+### Go
+
+Install go from the latetest version
+
+Add this to your `.profile` or `.bashrc`
+
+```
+PATH=~/.local/bin:$PATH
+
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH="$HOME/go"
+export GOROOT=/usr/local/go
+```
+
 ## Make soft links
 
 Create these softlinks from the home directory
