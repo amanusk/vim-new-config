@@ -43,9 +43,9 @@ nvm install lts
 ##  Make soft links
 
 Create these softlinks from the home directory
-`ln -s ~/.vim/vimrc ~/.vimr`
-`ln -s ~/.vim/prettierrc .prettierrc`
-`ln -s ~/.vim/tmux.conf .tmux.conf`
+* `ln -s ~/.vim/vimrc ~/.vimrc`
+* `ln -s ~/.vim/prettierrc .prettierrc`
+* `ln -s ~/.vim/tmux.conf .tmux.conf`
 
 
 ## Install plugins
