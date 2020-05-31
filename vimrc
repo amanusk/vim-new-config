@@ -202,7 +202,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mbbill/undotree'
 " coc and extentions
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" CocInstall coc-eslint coc-prettier coc-tsserver coc-json coc-rls
+" CocInstall coc-eslint coc-prettier coc-tsserver coc-json coc-rls coc-marketplace
 
 " Fuzzy search
 Plug 'junegunn/fzf', {'do': {-> fzf#install() }}
@@ -217,14 +217,14 @@ Plug 'ayuanx/vim-mark-standalone'
 Plug 'TovarishFin/vim-solidity'
 
 " Ale
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale', {'on': []}
 
 " Latex
 Plug 'lervag/vimtex'
 call plug#end()
 
 " Fuzzy search files
-nnoremap <C-p> :GFiles<CR>
+nnoremap <C-f> :GFiles<CR>
 
 
 source $HOME/.vim/coc.vim
