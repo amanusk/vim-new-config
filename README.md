@@ -66,6 +66,11 @@ Install the latest vesion with
 nvm install lts/erbium
 ```
 
+
+## Clone the repo
+git clone https://github.com/amanusk/new-vim-config.git ~/.vim
+
+
 ## Optional additional installations
 
 ### Install yarn
