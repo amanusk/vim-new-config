@@ -238,7 +238,7 @@ Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " Fuzzy search files
-nnoremap <C-p> :GFiles<CR>
+nnoremap <C-f> :GFiles<CR>
 
 
 source $HOME/.vim/coc.vim
