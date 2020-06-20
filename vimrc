@@ -216,18 +216,35 @@ Plug 'ayuanx/vim-mark-standalone'
 " Solidity
 Plug 'TovarishFin/vim-solidity'
 
-" Ale
+" Ale, disabled
 Plug 'dense-analysis/ale', {'on': []}
 
 " Latex
 Plug 'lervag/vimtex'
+
+" CSV
+Plug 'chrisbra/csv.vim'
+
+" editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
+" Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+" Markdwon syntax
+Plug 'plasticboy/vim-markdown'
+
+
 call plug#end()
 
 " Fuzzy search files
-nnoremap <C-p> :GFiles<CR>
+nnoremap <C-f> :GFiles<CR>
 
 autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
 source $HOME/.vim/coc.vim
 source $HOME/.vim/tex.vim
 source $HOME/.vim/ale.vim
+
+let g:vim_markdown_folding_disabled = 1
+
