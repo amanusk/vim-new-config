@@ -217,7 +217,7 @@ Plug 'ayuanx/vim-mark-standalone'
 Plug 'TovarishFin/vim-solidity'
 
 " Ale
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale', {'on': []}
 
 " Latex
 Plug 'lervag/vimtex'
@@ -226,6 +226,7 @@ call plug#end()
 " Fuzzy search files
 nnoremap <C-p> :GFiles<CR>
 
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
 source $HOME/.vim/coc.vim
 source $HOME/.vim/tex.vim

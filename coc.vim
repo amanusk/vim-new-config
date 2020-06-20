@@ -35,6 +35,11 @@ nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Fix autofix problem of current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
 " Different colors for warnings and error
 highlight CocErrorSign ctermfg=0 ctermbg=9
 " highlight CocWarningSign ctermfg=0 ctermbg=11
