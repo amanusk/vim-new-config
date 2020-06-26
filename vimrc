@@ -217,7 +217,8 @@ Plug 'ayuanx/vim-mark-standalone'
 Plug 'TovarishFin/vim-solidity'
 
 " Ale, disabled
-Plug 'dense-analysis/ale', {'on': []}
+" Plug 'dense-analysis/ale', {'on': []}
+Plug 'dense-analysis/ale'
 
 " Latex
 Plug 'lervag/vimtex'
@@ -240,7 +241,7 @@ call plug#end()
 " Fuzzy search files
 nnoremap <C-f> :GFiles<CR>
 
-autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+" autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
 source $HOME/.vim/coc.vim
 source $HOME/.vim/tex.vim
@@ -248,3 +249,6 @@ source $HOME/.vim/ale.vim
 
 let g:vim_markdown_folding_disabled = 1
 
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:EditorConfig_core_mode = 'external_command'
+let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'

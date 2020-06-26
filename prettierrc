@@ -5,4 +5,12 @@
   "trailingComma": "all",
   "arrowParens": "always",
   "bracketSpacing": true,
+    "overrides": [
+    {
+      "files": "*.sol",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

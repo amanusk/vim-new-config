@@ -4,3 +4,4 @@ tags
 autoload/*
 undodir/*
 plugged/*
+spell/
