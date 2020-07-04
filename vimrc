@@ -25,6 +25,7 @@ set foldmethod=marker
 
 " set color sheme
 colorscheme default
+set background=light
 " Use 256 colours (Use this setting only if your terminal supports 256
 " colours)
 set t_Co=256
@@ -235,7 +236,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " Markdwon syntax
 Plug 'plasticboy/vim-markdown'
 
-
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Fuzzy search files
