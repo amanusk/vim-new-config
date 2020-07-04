@@ -5,7 +5,7 @@ let g:ale_solidity_solc_options="--allow-paths $(pwd)"
 let g:ale_linters = {
 \   'typescript': [],
 \   'javascript': [],
-\   'python': [],
+\   'python': ['flake8'],
 \   'rust': [],
 \   'go': [],
 \   'json': [],
