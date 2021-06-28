@@ -5,3 +5,5 @@ autoload/*
 undodir/*
 plugged/*
 spell/
+
+.netrwhist
