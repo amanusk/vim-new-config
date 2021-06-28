@@ -40,6 +40,9 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
+
+nnoremap <leader>u :UndotreeToggle<CR>
+
 set smartcase
 set smartindent
 
@@ -236,7 +239,13 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " Markdwon syntax
 Plug 'plasticboy/vim-markdown'
 
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
+
 Plug 'morhetz/gruvbox'
+
+" Visual star
+Plug 'bronson/vim-visual-star-search'
+
 call plug#end()
 
 " Fuzzy search files
@@ -247,9 +256,22 @@ nnoremap <C-f> :GFiles<CR>
 source $HOME/.vim/coc.vim
 source $HOME/.vim/tex.vim
 source $HOME/.vim/ale.vim
+" source $HOME/.vim/py.vim
 
 let g:vim_markdown_folding_disabled = 1
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 let g:EditorConfig_core_mode = 'external_command'
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
+
+
+let g:instant_markdown_autostart = 0
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
