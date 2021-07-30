@@ -218,7 +218,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'ayuanx/vim-mark-standalone'
 
 " Solidity
-Plug 'TovarishFin/vim-solidity'
+" Plug 'TovarishFin/vim-solidity'
+Plug 'thesis/vim-solidity'
+
 
 " Ale, disabled
 " Plug 'dense-analysis/ale', {'on': []}
@@ -245,6 +247,9 @@ Plug 'morhetz/gruvbox'
 
 " Visual star
 Plug 'bronson/vim-visual-star-search'
+
+" Highlight log files
+Plug 'mtdl9/vim-log-highlighting'
 
 call plug#end()
 
@@ -275,3 +280,5 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
+
+set foldmethod=manual

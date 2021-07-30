@@ -9,6 +9,7 @@
     "javascript",
     "solidity",
     "rust",
+    "go",
     "json"
   ]
   // "coc.preferences.diagnostic.displayByAle": true
