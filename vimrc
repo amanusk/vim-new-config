@@ -25,7 +25,7 @@ set foldmethod=marker
 
 " set color sheme
 colorscheme default
-set background=light
+set background=dark
 " Use 256 colours (Use this setting only if your terminal supports 256
 " colours)
 set t_Co=256
@@ -35,6 +35,17 @@ set mousehide
 
 " Enable mouse
 set mouse=a
+
+function! ToggleMouse()
+    " check if mouse is enabled
+    if &mouse == 'a'
+        " disable mouse
+        set mouse=
+    else
+        " enable mouse everywhere
+        set mouse=a
+    endif
+endfunc
 
 set noswapfile
 set nobackup
@@ -175,6 +186,7 @@ set signcolumn=yes
 " delays and poor user experience.
 set updatetime=300
 
+nnoremap <leader>s :set spell<CR>
 
 " Help menu
 inoremap <F1> <Esc>
@@ -221,6 +233,9 @@ Plug 'ayuanx/vim-mark-standalone'
 " Plug 'TovarishFin/vim-solidity'
 Plug 'thesis/vim-solidity'
 
+" Vyper
+Plug 'vyperlang/vim-vyper'
+
 
 " Ale, disabled
 " Plug 'dense-analysis/ale', {'on': []}
@@ -251,6 +266,10 @@ Plug 'bronson/vim-visual-star-search'
 " Highlight log files
 Plug 'mtdl9/vim-log-highlighting'
 
+" Yul syntax
+Plug 'mattdf/vim-yul'
+
+
 call plug#end()
 
 " Fuzzy search files
@@ -265,9 +284,9 @@ source $HOME/.vim/ale.vim
 
 let g:vim_markdown_folding_disabled = 1
 
-let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
-let g:EditorConfig_core_mode = 'external_command'
-let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
+" let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+" let g:EditorConfig_core_mode = 'external_command'
+" let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 
 
 let g:instant_markdown_autostart = 0
@@ -281,4 +300,28 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
+
 set foldmethod=manual
+
+" tabnine full complete
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" some cairo config
+au BufReadPost *.cairo set filetype=cairo
+au Filetype cairo set syntax=cairo
+
+au BufNewFile,BufRead *.cairo
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+" Prettier config
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+:autocmd BufWritePost *.cairo silent ! cairo-format % -i  2> /dev/null

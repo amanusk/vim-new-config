@@ -1,5 +1,4 @@
 {
-  // my variable
   "tsserver.enable": true,
   "eslint.autoFixOnSave": true,
   "coc.preferences.formatOnSaveFiletypes": [
@@ -11,6 +10,13 @@
     "rust",
     "go",
     "json"
-  ]
-  // "coc.preferences.diagnostic.displayByAle": true
+  ],
+  "languageserver": {
+    "cairo": {
+      "module": "/home/amanusk/node_modules/cairo-ls/out/server.js",
+      "args": ["--node-ipc"],
+      "filetypes": ["cairo"],
+      "rootPatterns": [".git/"]
+    }
+  }
 }
