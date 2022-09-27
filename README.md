@@ -143,5 +143,5 @@ Coc uses its own plugin system
 To install all the userful plugins run this in the vim commandline
 
 ```
-CocInstall coc-eslint coc-prettier coc-tsserver coc-json coc-rls coc-solidity coc-vimlsp
+CocInstall coc-eslint coc-prettier coc-tsserver coc-json coc-rls coc-solidity coc-vimlsp coc-solidity coc-cairo coc-jedi coc-diagnostic
 ```
