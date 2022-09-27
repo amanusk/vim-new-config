@@ -66,10 +66,9 @@ Install the latest vesion with
 nvm install lts/erbium
 ```
 
-
 ## Clone the repo
-git clone https://github.com/amanusk/new-vim-config.git ~/.vim
 
+git clone https://github.com/amanusk/new-vim-config.git ~/.vim
 
 ## Optional additional installations
 
@@ -144,5 +143,5 @@ Coc uses its own plugin system
 To install all the userful plugins run this in the vim commandline
 
 ```
-CocInstall coc-eslint coc-prettier coc-tsserver coc-json coc-rls
+CocInstall coc-eslint coc-prettier coc-tsserver coc-json coc-rls coc-solidity coc-vimlsp
 ```

@@ -5,7 +5,7 @@
 set autoindent
 
 " set indentation
-set cindent
+" set cindent
 
 " Display when in Insert, Append or Replace mode on the bottom side
 set showmode
@@ -24,7 +24,7 @@ set backspace=2
 set foldmethod=marker
 
 " set color sheme
-colorscheme default
+colorscheme gruvbox
 set background=dark
 " Use 256 colours (Use this setting only if your terminal supports 256
 " colours)
@@ -295,26 +295,22 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    \ set textwidth=120 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
 
-
 set foldmethod=manual
-
-" tabnine full complete
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " some cairo config
 au BufReadPost *.cairo set filetype=cairo
 au Filetype cairo set syntax=cairo
 
-au BufNewFile,BufRead *.cairo
+au Filetype cairo
     \ set tabstop=4 |
-    \ set softtabstop=4 |
+    \ set softtabstop=3 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    \ set textwidth=120 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix

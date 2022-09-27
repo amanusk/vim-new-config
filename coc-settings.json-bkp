@@ -9,9 +9,7 @@
     "solidity",
     "rust",
     "go",
-    "vim",
-    "json",
-    "python"
+    "json"
   ],
   "languageserver": {
     "cairo": {
@@ -19,19 +17,6 @@
       "args": ["--node-ipc"],
       "filetypes": ["cairo"],
       "rootPatterns": [".git/"]
-    }
-  },
-  "diagnostic-languageserver.formatFiletypes": {
-    "python": ["black", "isort"]
-  },
-  "diagnostic-languageserver.formatters": {
-    "black": {
-      "command": "black",
-      "args": ["-q", "-"]
-    },
-    "isort": {
-      "command": "isort",
-      "args": ["-q", "-"]
     }
   }
 }
