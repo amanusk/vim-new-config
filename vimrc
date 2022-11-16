@@ -24,6 +24,7 @@ set backspace=2
 set foldmethod=marker
 
 " set color sheme
+let g:gruvbox_guisp_fallback = "bg"
 colorscheme gruvbox
 set background=dark
 " Use 256 colours (Use this setting only if your terminal supports 256
@@ -269,6 +270,9 @@ Plug 'mtdl9/vim-log-highlighting'
 " Yul syntax
 Plug 'mattdf/vim-yul'
 
+" vim black
+Plug 'psf/black', { 'branch': 'stable' }
+
 
 call plug#end()
 
@@ -280,7 +284,7 @@ nnoremap <C-f> :GFiles<CR>
 source $HOME/.vim/coc.vim
 source $HOME/.vim/tex.vim
 source $HOME/.vim/ale.vim
-" source $HOME/.vim/py.vim
+source $HOME/.vim/py.vim
 
 let g:vim_markdown_folding_disabled = 1
 
